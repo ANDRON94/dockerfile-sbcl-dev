@@ -2,7 +2,7 @@
 This repository contains *Dockerfile* of [[https://common-lisp.net/project/slime/doc/html/Connecting-to-a-remote-lisp.html][Swank(SLIME backend)]]
 for Docker's automated build published to the [[https://hub.docker.com/r/andron94/dockerfile-sbcl-dev/][Docker Hub]].
 ** Base Docker Image
-+ [[https://hub.docker.com/r/andron94/dockerfile-quicksbcl/][andron94/dockerfile-quicksbcl:1.0.0]]
++ [[https://hub.docker.com/r/andron94/dockerfile-quicksbcl/][andron94/dockerfile-quicksbcl:1.1.0]]
 ** Installation
 1. Install [[https://docs.docker.com/engine/installation/][Docker]].
 2. Download automated build from public Docker Hub Registry:
