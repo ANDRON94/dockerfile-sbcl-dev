@@ -5,7 +5,7 @@ for Docker's automated build published to the [Docker Hub](https://hub.docker.co
 
 ## Base Docker Image
 
-+ [andron94/dockerfile-quicksbcl:1.3.0](https://hub.docker.com/r/andron94/dockerfile-quicksbcl/)
++ [andron94/dockerfile-quicksbcl:1.4.0](https://hub.docker.com/r/andron94/dockerfile-quicksbcl/)
 
 ## Installation
 

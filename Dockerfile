@@ -1,4 +1,4 @@
-FROM andron94/dockerfile-quicksbcl:1.3.0
+FROM andron94/dockerfile-quicksbcl:1.4.0
 MAINTAINER Andrii Tymchuk <makedonsky94@gmail.com>
 
 # ====================== Install Swank(SLIME backend) ==========================
