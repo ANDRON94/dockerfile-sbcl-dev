@@ -1,4 +1,4 @@
-FROM andron94/dockerfile-quicksbcl:1.4.0
+FROM andron94/dockerfile-quicksbcl:1.5.1
 MAINTAINER Andrii Tymchuk <makedonsky94@gmail.com>
 
 # ====================== Install Swank(SLIME backend) ==========================
@@ -12,14 +12,14 @@ ENV SWANK_PORT 4005
 #    - load Swank;
 #    - create&run Swank server.
 ENV SWANK_INIT_SCRIPT="\
-(ql:quickload :swank)\n\
+(ql:quickload \"swank\")\n\
 (swank-loader:init)\n\
 (swank:create-server :interface \"0.0.0.0\" :port ${SWANK_PORT} :dont-close t)"
 
 # 2. Installation:
 #  1. Download and install Swank through Quicklisp.
 #  2. Add Swank initialization script to SBCL startup script.
-RUN sbcl --eval '(ql:quickload :swank)' \
+RUN sbcl --eval '(ql:quickload "swank")' \
          --eval '(quit)' &&\
     echo -e ${SWANK_INIT_SCRIPT} >> $HOME/${SBCL_INIT_FILE}
 

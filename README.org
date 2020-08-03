@@ -1,13 +1,13 @@
-* SBCL-dev Dockerfile
+* SBCL-SLIME Dockerfile
 This repository contains *Dockerfile* of [[https://common-lisp.net/project/slime/doc/html/Connecting-to-a-remote-lisp.html][Swank(SLIME backend)]]
-for Docker's automated build published to the [[https://hub.docker.com/r/andron94/dockerfile-sbcl-dev/][Docker Hub]].
+for Docker's automated build published to the [[https://hub.docker.com/r/andron94/dockerfile-sbcl-slime/][Docker Hub]].
 ** Base Docker Image
-+ [[https://hub.docker.com/r/andron94/dockerfile-quicksbcl/][andron94/dockerfile-quicksbcl:1.4.0]]
++ [[https://hub.docker.com/r/andron94/dockerfile-quicksbcl/][andron94/dockerfile-quicksbcl:1.5.1]]
 ** Installation
 1. Install [[https://docs.docker.com/engine/installation/][Docker]].
 2. Download automated build from public Docker Hub Registry:
    #+BEGIN_SRC sh
-   docker pull andron94/dockerfile-sbcl-dev:[TAG]
+   docker pull andron94/dockerfile-sbcl-slime:[TAG]
    #+END_SRC
 ** Usage
 *** Create environment for ~Common Lisp~ development
@@ -19,7 +19,7 @@ and installation; Swank helps to use Lisp REPL from an Emacs as usual.
 # Also, set up the connection between localhost(127.0.0.1)
 # on port 4000(you can use any port you like) and Docker port 4005.
 docker run -id -p 127.0.0.1:4000:4005 \
-           --name test-sbcl andron94/dockerfile-sbcl-dev:[TAG]
+           --name test-sbcl andron94/dockerfile-sbcl-slime:[TAG]
 # Control Lisp image.
 docker stop test-sbcl
 docker start test-sbcl
@@ -29,5 +29,5 @@ docker restart test-sbcl
 #+END_SRC
 *** Run ~shell~ session
 #+BEGIN_SRC sh
-docker run --rm -it --entrypoint /bin/sh andron94/dockerfile-sbcl-dev:[TAG]
+docker run --rm -it --entrypoint /bin/sh andron94/dockerfile-sbcl-slime:[TAG]
 #+END_SRC
